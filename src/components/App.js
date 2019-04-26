@@ -23,11 +23,9 @@ class App extends React.Component {
         break;
       case 'cat':
         break;
-      case 'cat':
+      case 'dog':
         break;
-      case 'cat':
-        break;
-      case 'cat':
+      case 'micropig':
         break;
     }
   }
