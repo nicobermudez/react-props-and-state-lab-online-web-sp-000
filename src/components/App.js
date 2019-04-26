@@ -20,7 +20,7 @@ class App extends React.Component {
 
     switch(this.state.type) {
       case 'all':
-        
+        url
         break;
       case 'cat':
         break;
