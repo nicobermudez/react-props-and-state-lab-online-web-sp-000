@@ -23,7 +23,7 @@ class Pet extends React.Component {
           ) : (
             <button className="ui primary button" onClick={this.props.onAdoptPet}>Adopt pet</button>
           )
-          )}
+          }
 
 
         </div>
