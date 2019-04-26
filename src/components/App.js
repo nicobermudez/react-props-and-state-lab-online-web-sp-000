@@ -19,9 +19,6 @@ class App extends React.Component {
     let url = "/api/pets"
 
     switch(this.state.type) {
-      case 'all':
-        url
-        break;
       case 'cat':
         url += "?type=cat"
         break;
