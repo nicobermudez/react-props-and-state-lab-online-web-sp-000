@@ -1,5 +1,3 @@
-s (55 sloc)  1.46 KB
-
 import React from 'react';
 
 import Filters from './Filters';
