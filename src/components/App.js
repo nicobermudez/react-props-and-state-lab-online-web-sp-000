@@ -16,7 +16,9 @@ class App extends React.Component {
   }
 
   onChangeType = event => {
-    
+    this.setState({
+      
+    })
   }
 
   render() {
