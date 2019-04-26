@@ -17,7 +17,7 @@ class App extends React.Component {
 
   onChangeType = event => {
     this.setState({
-      
+      ...this.state.pets
     })
   }
 
