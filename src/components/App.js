@@ -17,18 +17,7 @@ class App extends React.Component {
 
   fetchPets = () => {
     let url = "/api/pets"
-
-    switch(this.state.type) {
-      case 'cat':
-        url += "?type=cat"
-        break;
-      case 'dog':
-        url += "?type=dog"
-        break;
-      case 'micropig':
-        url += "?type=micropig"
-        break;
-    }
+    
 
     fetch(url)
       .then(res => res.json())
