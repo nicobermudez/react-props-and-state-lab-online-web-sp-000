@@ -17,6 +17,10 @@ class App extends React.Component {
 
   fetchPets = () => {
     let url = "/api/pets"
+
+    switch(this.state.type) {
+      
+    }
   }
 
   onChangeType = event => {
