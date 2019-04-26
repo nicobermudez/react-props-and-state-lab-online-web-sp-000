@@ -26,8 +26,10 @@ class App extends React.Component {
         url += "?type=cat"
         break;
       case 'dog':
+        url += "?type=dog"
         break;
       case 'micropig':
+        url += "?type=micropig"
         break;
     }
   }
