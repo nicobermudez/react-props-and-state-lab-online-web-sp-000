@@ -34,7 +34,7 @@ class App extends React.Component {
           <div className="ui grid">
             <div className="four wide column">
               <Filters
-              onChange={onChangeType}
+              onChange={this.onChangeType}
               onFindPetsClick={this.fetchPets}
               />
             </div>
