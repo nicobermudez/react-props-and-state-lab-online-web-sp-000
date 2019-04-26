@@ -15,6 +15,10 @@ class App extends React.Component {
     }
   }
 
+  fetchPets = () => {
+    
+  }
+
   onChangeType = event => {
     this.setState({
       filters: {
