@@ -35,7 +35,7 @@ class App extends React.Component {
             <div className="four wide column">
               <Filters
               onChange={onChangeType}
-              
+              onFindPetsClick={this.fetchPets}
               />
             </div>
             <div className="twelve wide column">
