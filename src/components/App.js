@@ -39,6 +39,9 @@ class App extends React.Component {
     })
   }
 
+  onAdoptPet = petId => {
+    
+  }
   render() {
     return (
       <div className="ui container">
