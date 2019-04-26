@@ -1,51 +1,45 @@
-import React from 'react'
+s (55 sloc)  1.46 KB
 
-import Filters from './Filters'
-import PetBrowser from './PetBrowser'
+import React from 'react';
+
+import Filters from './Filters';
+import PetBrowser from './PetBrowser';
 
 class App extends React.Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       pets: [],
       filters: {
         type: 'all'
       }
-    }
+    };
   }
 
   fetchPets = () => {
-    let url = "/api/pets"
+    let endpoint = '/api/pets';
 
-    if(this.state.filters.type !== 'all') {
-      url += `?type=${this.state.filters.type}`
+    if (this.state.filters.type !== 'all') {
+      endpoint += `?type=${this.state.filters.type}`;
     }
 
-    fetch(url)
+    fetch(endpoint)
       .then(res => res.json())
-      .then(data => this.setState({
-          data
-        })
-      )
-  }
+      .then(pets => this.setState({ pets }));
+  };
 
-  onChangeType = event => {
-    this.setState({
-      filters: {
-        ...this.state.filters,
-        type: event.state.value
-      }
-    })
-  }
+  onChangeType = ({ target: { value } }) => {
+    this.setState({ filters: { ...this.state.filters, type: value } });
+  };
 
   onAdoptPet = petId => {
     const pets = this.state.pets.map(p => {
-      return p.id === petId ? {...p, isAdopted: true} : p;
-    })
-    this.setState({ pets })
-  }
-  
+      return p.id === petId ? { ...p, isAdopted: true } : p;
+    });
+    this.setState({ pets });
+  };
+
   render() {
     return (
       <div className="ui container">
@@ -56,8 +50,8 @@ class App extends React.Component {
           <div className="ui grid">
             <div className="four wide column">
               <Filters
-              onChange={this.onChangeType}
-              onFindPetsClick={this.fetchPets}
+                onChangeType={this.onChangeType}
+                onFindPetsClick={this.fetchPets}
               />
             </div>
             <div className="twelve wide column">
@@ -66,8 +60,8 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
