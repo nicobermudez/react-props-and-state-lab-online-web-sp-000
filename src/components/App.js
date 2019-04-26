@@ -15,6 +15,10 @@ class App extends React.Component {
     }
   }
 
+  onChangeType = event => {
+    
+  }
+
   render() {
     return (
       <div className="ui container">
