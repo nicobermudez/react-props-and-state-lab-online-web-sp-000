@@ -45,6 +45,7 @@ class App extends React.Component {
     })
     this.setState({ pets })
   }
+  
   render() {
     return (
       <div className="ui container">
