@@ -23,6 +23,7 @@ class App extends React.Component {
         url
         break;
       case 'cat':
+        url += "?type=cat"
         break;
       case 'dog':
         break;
