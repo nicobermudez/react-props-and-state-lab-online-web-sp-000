@@ -33,7 +33,10 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters onChange={onChangeType}/>
+              <Filters
+              onChange={onChangeType}
+              
+              />
             </div>
             <div className="twelve wide column">
               <PetBrowser />
