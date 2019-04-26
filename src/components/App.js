@@ -20,6 +20,7 @@ class App extends React.Component {
 
     switch(this.state.type) {
       case 'all':
+        
         break;
       case 'cat':
         break;
