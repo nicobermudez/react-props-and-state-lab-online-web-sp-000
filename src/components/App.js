@@ -29,6 +29,8 @@ class App extends React.Component {
         url += "?type=micropig"
         break;
     }
+
+    fetch(url)
   }
 
   onChangeType = event => {
